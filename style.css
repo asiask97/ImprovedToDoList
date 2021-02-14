@@ -7,7 +7,7 @@
 
 html, body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+}
 
 ul{
     text-decoration: none;
@@ -27,6 +27,8 @@ input[type="text"]{
 
 body{
     background: white;
+    font-family:'monospace regular';
+
 }
 
 .listbox{
@@ -118,20 +120,19 @@ span:hover path{
 input[type='text']{
     border-bottom: 1px solid black;
     font-size: 24px;
-    font-family: 'Montserrat', sans-serif;
-
 }
 
 
 
 
 /* fonts */
-
+@font-face{
+    font-family:'monospace regular';
+    src: url('fonts/Montserrat-Regular.ttf');
+}
 
 li {
     font-size: 18px;
-    font-family: 'Montserrat', sans-serif;
-
 }
 
 
