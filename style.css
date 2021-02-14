@@ -118,6 +118,8 @@ span:hover path{
 input[type='text']{
     border-bottom: 1px solid black;
     font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 
@@ -128,6 +130,8 @@ input[type='text']{
 
 li {
     font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 
