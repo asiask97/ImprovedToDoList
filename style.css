@@ -7,7 +7,7 @@
 
 html, body {
     margin: 0;
-}
+    font-family: 'Montserrat', sans-serif;
 
 ul{
     text-decoration: none;
@@ -27,8 +27,6 @@ input[type="text"]{
 
 body{
     background: white;
-    font-family:'monospace regular';
-
 }
 
 .listbox{
@@ -126,10 +124,7 @@ input[type='text']{
 
 
 /* fonts */
-@font-face{
-    font-family:'monospace regular';
-    src: url('fonts/Montserrat-Regular.ttf');
-}
+
 
 li {
     font-size: 18px;
