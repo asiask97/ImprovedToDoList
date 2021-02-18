@@ -19,43 +19,41 @@ function inputshow(){
 
 }
 
+function createElement(value){
+
+    var textforlist = value;
+    var input = document.createElement("li");
+    input.className ='li';
+    var addingvalue = document.createTextNode(textforlist);
+    input.appendChild(addingvalue);
+    
+    //adding svg
+    var span = document.createElement('span');
+    span.setAttribute('class','delete');       
+    var svg = document.createElementNS("http://www.w3.org/2000/svg", 'svg');;
+    svg.setAttribute('width', '17');
+    svg.setAttribute('height', '18');
+    svg.setAttribute('fill', 'none');
+    svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+    path = document.createElementNS('http://www.w3.org/2000/svg',"path");  
+    path.setAttribute('d', 'M13.166 11.023l-2.844-2.606 2.62-2.86a.86.86 0 00-.05-1.215l-.632-.579a.86.86 0 00-1.214.057l-2.62 2.86L5.58 4.075a.86.86 0 00-1.214.057l-.582.636a.86.86 0 00.05 1.214l2.844 2.605-2.62 2.861a.86.86 0 00.05 1.215l.632.579a.86.86 0 001.214-.057l2.62-2.86 2.844 2.605a.86.86 0 001.215-.057l.582-.636a.86.86 0 00-.05-1.214z');
+    path.setAttribute('fill', '#ffffff');
+
+    ul.appendChild(input);
+    input.appendChild(span);
+    span.appendChild(svg);
+    svg.appendChild(path);
+}
+
 
 document.addEventListener('keypress', addtoLi);
-
-var num = 0
 function addtoLi(e){
     if (e.charCode === 13 && !inputvalue.value == ''){
        
 
         inputshow();
-        var textforlist = inputvalue.value;
-        var input = document.createElement("li");
-        input.className ='li';
-        var addingvalue = document.createTextNode(textforlist);
-        input.appendChild(addingvalue);
-        
-        //adding svg
-        var span = document.createElement('span');
-        span.setAttribute('class','delete');       
-        var svg = document.createElementNS("http://www.w3.org/2000/svg", 'svg');;
-        svg.setAttribute('width', '17');
-        svg.setAttribute('height', '18');
-        svg.setAttribute('fill', 'none');
-        svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-        path = document.createElementNS('http://www.w3.org/2000/svg',"path");  
-        path.setAttribute('d', 'M13.166 11.023l-2.844-2.606 2.62-2.86a.86.86 0 00-.05-1.215l-.632-.579a.86.86 0 00-1.214.057l-2.62 2.86L5.58 4.075a.86.86 0 00-1.214.057l-.582.636a.86.86 0 00.05 1.214l2.844 2.605-2.62 2.861a.86.86 0 00.05 1.215l.632.579a.86.86 0 001.214-.057l2.62-2.86 2.844 2.605a.86.86 0 001.215-.057l.582-.636a.86.86 0 00-.05-1.214z');
-        path.setAttribute('fill', '#ffffff');
-
-        ul.appendChild(input);
-        input.appendChild(span);
-        span.appendChild(svg);
-        svg.appendChild(path);
-        
-
+        createElement(inputvalue.value)
         //local stroage
-
-        num ++
-        var element = 'element'+ num
         localStorage.setItem(inputvalue.value, inputvalue.value);
         
         // reset input text
@@ -96,28 +94,9 @@ function fromMemory(){
         var key = localStorage.key(i);
         var value = localStorage[key];
         
-        var input = document.createElement("li");
-        input.className ='li';
-        var addingvalue = document.createTextNode(value);
-        input.appendChild(addingvalue);
-        ul.appendChild(input);
 
-        //adding svg
-        var span = document.createElement('span');
-        span.setAttribute('class','delete');       
-        var svg = document.createElementNS("http://www.w3.org/2000/svg", 'svg');;
-        svg.setAttribute('width', '17');
-        svg.setAttribute('height', '18');
-        svg.setAttribute('fill', 'none');
-        svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-        path = document.createElementNS('http://www.w3.org/2000/svg',"path");  
-        path.setAttribute('d', 'M13.166 11.023l-2.844-2.606 2.62-2.86a.86.86 0 00-.05-1.215l-.632-.579a.86.86 0 00-1.214.057l-2.62 2.86L5.58 4.075a.86.86 0 00-1.214.057l-.582.636a.86.86 0 00.05 1.214l2.844 2.605-2.62 2.861a.86.86 0 00.05 1.215l.632.579a.86.86 0 001.214-.057l2.62-2.86 2.844 2.605a.86.86 0 001.215-.057l.582-.636a.86.86 0 00-.05-1.214z');
-        path.setAttribute('fill', '#ffffff');
+        createElement(value)
 
-        ul.appendChild(input);
-        input.appendChild(span);
-        span.appendChild(svg);
-        svg.appendChild(path);
     }
 
 }
