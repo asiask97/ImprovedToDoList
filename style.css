@@ -30,7 +30,16 @@ body{
     font-family:'monospace regular';
 
 }
+.otherLists{
+    position: relative;
+    text-align: center;
 
+}
+.pluslistbox{
+    position: relative;
+    bottom: -95px;
+
+}
 .listbox{
     background: linear-gradient(180deg, #EBF4F5 6.25%, #D8E3ED 51.74%, #B5C6E0 106.25%);
     border-radius: 21px; 
@@ -122,7 +131,12 @@ input[type='text']{
     font-size: 24px;
 }
 
-
+h2{
+    margin-top: 50px;
+    margin-bottom: 45px;
+    margin-left: 32px;
+    font-size: 24px;
+}
 
 
 /* fonts */
